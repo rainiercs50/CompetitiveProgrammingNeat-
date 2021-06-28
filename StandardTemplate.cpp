@@ -3,18 +3,20 @@ using namespace std;
  
 #define ll long long
 #define ar array
+#define endl '\n'
  
-const int mxN=1e5;
+const int mxN=3e5;
 
-
-void solve(int tc){
+void solve(){
 	
 }
 int main(){
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
-	int t=1;
+	int t;
 	cin >> t;
-	for(int tc=0; tc<t; ++tc) solve(tc);
+	while(t--)
+		solve();
+	
 }
