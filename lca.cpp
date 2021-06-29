@@ -1,25 +1,26 @@
-
 struct lca{
 	vector<vector<int>> adj, jump;
 	vector<int> d, par;
 	int n, log;
 	void ae(int x, int y){
-		adj[x-1].push_back(y-1);
-		adj[y-1].push_back(x-1);
+		adj[x].push_back(y);
+		adj[y].push_back(x);
+		
 	}
 	void init(int s, int lg){
 		n=s;
 		log=lg;
 		adj=vector<vector<int>>(n);
-		jump=vector<vector<int>>(n, vector<int>(26));
+		jump=vector<vector<int>>(n, vector<int>(log+2));
 		par=d=vector<int>(n);
 		
 	}
-
-	void dfs(int u=0, int p=-1){
+ 
+	void dfs(int u=0, int p=0){
+	
 		par[u]=p;
 		jump[u][0]=p;
-
+ 
 		for(int j=1; j<log; ++j) {
 			if(jump[u][j-1]==-1) continue;
 			jump[u][j]=jump[jump[u][j-1]][j-1];
@@ -35,13 +36,16 @@ struct lca{
 	}
 	int LCA(int x, int y){
 		if(d[x]<d[y]) swap(x, y);
-		int dif=d[y]-d[x];
-		for(int i=0; i<log; ++i) if(dif&(1<<i)) x=jump[x][i];
-		for(int i=log; ~log; --log){
+		int dif=d[x]-d[y];
+		x=jmp(x, dif);
+		if(x==y) return x;
+		
+		for(int i=log-1; i>=0; --i){
 			int X=jump[x][i], Y=jump[y][i];
-			if(par[X]==par[Y]) continue;
+			if(X==Y) continue;
 			x=X, y=Y;
 		}
+		
 		return par[x];
 	}
 	int dist(int x, int y){
