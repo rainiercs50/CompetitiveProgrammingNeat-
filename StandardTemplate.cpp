@@ -1,22 +1,10 @@
 #include <bits/stdc++.h>
-using namespace std;
- 
-#define ll long long
 #define ar array
 #define endl '\n'
- 
-const int mxN=3e5;
 
-void solve(){
-	
-}
+using namespace std;
+using ll = long long;
+
 int main(){
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-
-	int t;
-	cin >> t;
-	while(t--)
-		solve();
-	
+	ios::sync_with_stdio(0); cin.tie(0); cout << fixed << setprecision(15);
 }
