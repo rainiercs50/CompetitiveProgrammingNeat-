@@ -14,14 +14,14 @@ using ld = long double;
 template<class T> using mpq = priority_queue<T, vector<T>, greater<T>>;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-int pct(ll x) { return __builtin_popcountll(x); } 
-int bits(ll x) { return 63 - __builtin_clzll(x); }
-ll cdiv(ll x, ll y){ return (x / y) + !!(x % y); }
+int pct(const ll &x) { return __builtin_popcountll(x); } 
+int bits(const ll &x) { return 63 - __builtin_clzll(x); }
+ll cdiv(const ll &x, const ll &y){ return (x / y) + !!(x % y); }
 
 template<class T> bool chmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; } 
 template<class T> bool chmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
-template<class T> T uid(T a, T b){ return uniform_int_distribution<T> (a, b)(rng); }
-template<class T> bool inc(T a, T b, T c){ return a <= b && b <= c; }
+template<class T> T uid(const T &a, const T &b){ return uniform_int_distribution<T> (a, b)(rng); }
+template<class T> bool inc(const T &a, const T &b, const T &c){ return a <= b && b <= c; }
 template<class T> int lb(const vector<T> &v, const T &a){ return lower_bound(all(v), a) - v.begin(); }
 template<class T> int ub(const vector<T> &v, const T &a){ return upper_bound(all(v), a) - v.begin(); }
 template<class T> int mx(const vector<T> &v){ return max_element(all(v)) - v.begin(); }
