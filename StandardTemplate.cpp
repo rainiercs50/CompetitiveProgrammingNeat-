@@ -7,8 +7,7 @@ using ld = long double;
 
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
-#define trav(i, a) for(auto &i : a)
-#define sz(a) (int) a.size();
+#define sz(v) ((int)(v).size())
 #define unique(v) v.erase(unique(v.begin(), v.end()), v.end())
 
 template<class T> using mpq = priority_queue<T, vector<T>, greater<T>>;
@@ -29,11 +28,10 @@ template<class T> int mn(const vector<T> &v){ return min_element(all(v)) - v.beg
 template<class T> T sum(const vector<T> &v){ return accumulate(all(v), (T)0); }
 
 const int dx[4] = {0, 0, 1, -1}, dy[4] = {1, -1, 0, 0};
-const char dir[4] = {'R', 'L', 'D', 'U'}, ep = '\n';
-const ll INF = 1e18, MOD = 1e9 + 7, mxN = 1e5;
+const char dir[4] = {'R', 'L', 'D', 'U'}, ed = '\n';
+const ll INF = 2e18, MOD = 1e9 + 7;
 
 void solve(int tc){
-	
 
 }
 int main(){
@@ -46,3 +44,4 @@ int main(){
 	for(int tc = 0; tc < t; ++tc)
 		solve(tc);	
 }
+
