@@ -6,7 +6,7 @@ int mult(int a, int b) {
 	return 1LL * a * b % MOD;
 }
  
-int pow(int b, int p) {
+int POW(int b, int p) {
 	int res = 1;
 	while (p) {
 		if (p & 1) {
@@ -19,16 +19,17 @@ int pow(int b, int p) {
 }
  
 int inv(int x) {
-	return pow(x, MOD - 2);
+	return POW(x, MOD - 2);
 }
  
-const int mxN = 3e5;
+ 
 int fact[mxN + 1], ifact[mxN + 1];
  
 int nck(int n, int k) {
 	if (k > n) {
 		return 0;
 	}
+	
 	return mult(fact[n], mult(ifact[k], ifact[n - k]));
 }
  
