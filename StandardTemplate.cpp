@@ -37,7 +37,7 @@ void solve(int tc){
 	
 }
 int32_t main(){
-	auto setIO = [](string s){
+	auto setIO = [](string s = ""){
 		ios::sync_with_stdio(0); 
 		cin.tie(0); 
 		cout << fixed << setprecision(15);
