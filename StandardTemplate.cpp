@@ -26,30 +26,34 @@ template<class T> int ub(const vector<T> &v, const T &a){ return upper_bound(all
 template<class T> int mx(const vector<T> &v){ return max_element(all(v)) - v.begin(); }
 template<class T> int mn(const vector<T> &v){ return min_element(all(v)) - v.begin(); }
 template<class T> T sum(const vector<T> &v){ return accumulate(all(v), (T)0); }
-void USACO(string s = ""){ if(sz(s)) ifstream(s + ".in"), ofstream(s + ".out");}
 
 const int dx[4] = {0, 0, 1, -1}, dy[4] = {1, -1, 0, 0};
 const char dir[4] = {'R', 'L', 'D', 'U'}, ed = '\n';
-const ll INF = 1e18, MOD = 1e9 + 7, mxN = 1e5 + 5;
+const ll INF = 2e18, MOD = 1e9 + 7, mxN = 2e5 + 5;
 
 // #define int long long 
-	
+
 void solve(int tc){
 	
 }
 int32_t main(){
-	ios::sync_with_stdio(0); 
-	cin.tie(0); 
-	cout << fixed << setprecision(15);
-	USACO();
-
+	auto setIO = [](string s){
+		ios::sync_with_stdio(0); 
+		cin.tie(0); 
+		cout << fixed << setprecision(15);
+		if(sz(s)){
+			freopen((s + ".in").c_str(), "r", stdin);
+			freopen((s + ".out").c_str(), "w", stdout);
+		}
+	};
+	setIO();
 	int t = 1;
 	// cin >> t;
 	for(int tc = 0; tc < t; ++tc)
 		solve(tc);
-
+		
 #ifdef __APPLE__
-    cerr << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
+    cerr << ed << "Time elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC << " s.\n";
 #endif
     return 0;	
 }
