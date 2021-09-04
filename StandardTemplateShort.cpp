@@ -4,10 +4,6 @@ using namespace std;
 
 using ll = long long;
 using db = long double;
-using pi = pair<int, int>;
-using pl = pair<ll, ll>;
-using pd = pair<db, db>;
-
 
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin(), (x).rend()
@@ -27,19 +23,14 @@ template<class T> T uid(const T &a, const T &b){ return uniform_int_distribution
 template <typename I> struct _reversed_struct { I &v_; explicit _reversed_struct(I &v) : v_{v} {} typename I::reverse_iterator begin() const { return v_.rbegin(); } typename I::reverse_iterator end() const { return v_.rend(); } };
 template <typename I> _reversed_struct<I> reversed(I &v) { return _reversed_struct<I>(v); }
 
-
-
 const int dx[4] = {0, 0, 1, -1}, dy[4] = {1, -1, 0, 0};
 const char dir[4] = {'R', 'L', 'D', 'U'}, ed = '\n';
 const ll INF = 2e18, MOD = 1e9 + 7, mxN = 1e5 + 5;
 
 // #define int long long 
 
-int n, m, k;
-vector<pair<int, int>> adj[mxN];
 
 void solve(int tc){
-	
 	
 }
 int32_t main(){
