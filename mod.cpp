@@ -5,6 +5,11 @@ int add(int a, int b) {
 int mult(int a, int b) {
 	return 1LL * a * b % MOD;
 }
+ll sub(ll a, ll b){
+    ll x = a - b;
+    while(x < 0) x += MOD;
+    return x;
+}
  
 int POW(int b, int p) {
 	int res = 1;
@@ -31,6 +36,9 @@ int nck(int n, int k) {
 	}
 	
 	return mult(fact[n], mult(ifact[k], ifact[n - k]));
+}
+int npr(int n, int r){
+	return mult(fact[n], inv(fact[n - r]));
 }
  
 void init() {
