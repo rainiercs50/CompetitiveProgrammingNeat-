@@ -13,7 +13,7 @@ signed main(){
     cin.tie(0);
     cout << fixed << setprecision(15);
 
-    int t;
+    int t = 1;
     cin >> t;
     while(t--)
         solve();
