@@ -2,13 +2,18 @@
 using namespace std;
 
 #define ed '\n'
-#define int long long 
-
+#define sz(x) (int)(x).size();
+#define ll long long 
+#define db long double 
+#define sz(v) ((int)(v).size())
+#define all(x) (x).begin(), (x).end()
 
 void solve(){
-   
+    
+    
+
 }
-signed main(){
+int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout << fixed << setprecision(15);
