@@ -2,7 +2,6 @@
 using namespace std;
 
 #define ed '\n'
-#define sz(x) (int)(x).size();
 #define ll long long 
 #define db long double 
 #define sz(v) ((int)(v).size())
